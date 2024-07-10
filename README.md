@@ -1,10 +1,18 @@
-# ejs-webpack-loader for webpack 4.x
+# @code-dot-org/ejs-webpack-loader for webpack 4.x
 
 EJS loader for [webpack](http://webpack.github.io/). Uses [ejs](https://github.com/mde/ejs) function to compile templates.
 
+## Fork
+
+This is a fork of [rorkflash/ejs-webpack-loader](https://github.com/rorkflash/ejs-webpack-loader) and includes the 
+following changes to mitigate some transitive vulnerabilities:
+
+* bump ejs to 3.x
+* bump loader-utils to 2.x
+
 ## Installation
 
-`npm install ejs-webpack-loader`
+`npm install @code-dot-org/ejs-webpack-loader`
 
 ## Config Setup examples as module loader
 
@@ -38,7 +46,7 @@ const config = {
           test: /\.ejs$/,
           use: [
               {
-                loader: "ejs-webpack-loader",
+                loader: "@code-dot-org/ejs-webpack-loader",
                 options: {
                   data: {title: "New Title", someVar:"hello world"},
                   htmlmin: true
@@ -83,7 +91,7 @@ const config = {
                       loader: 'extract-loader'
                   },
                   {
-                      loader: "ejs-webpack-loader",
+                      loader: "@code-dot-org/ejs-webpack-loader",
                       {
                         data: {title: "New Title", someVar:"hello world"},
                         htmlmin: true
@@ -112,7 +120,7 @@ const config = {
   },
   plugin: {
     new HtmlWebpackPlugin({
-        template: '!!ejs-webpack-loader!src/index.ejs'
+        template: '!!@code-dot-org/ejs-webpack-loader!src/index.ejs'
     })
   }
 };

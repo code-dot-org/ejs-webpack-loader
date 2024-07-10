@@ -1,6 +1,6 @@
 {
-  "name": "ejs-webpack-loader",
-  "version": "2.2.2",
+  "name": "@code-dot-org/ejs-webpack-loader",
+  "version": "3.0.0",
   "description": "EJS webpack 4.x loader (without frontend dependencies)",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rorkflash/ejs-webpack-loader"
+    "url": "https://github.com/code-dot-org/ejs-webpack-loader"
   },
   "keywords": [
     "ejs",
@@ -19,9 +19,9 @@
   "author": "Ashot Gasparyan <rorkflash@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rorkflash/ejs-webpack-loader/issues"
+    "url": "https://github.com/code-dot-org/ejs-webpack-loader/issues"
   },
-  "homepage": "https://github.com/rorkflash/ejs-webpack-loader",
+  "homepage": "https://github.com/code-dot-org/ejs-webpack-loader",
   "dependencies": {
     "html-minifier": "^3",
     "loader-utils": "^0.2.7",
