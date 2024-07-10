@@ -8,10 +8,8 @@ var ejs = require('ejs'),
 
 module.exports = function(source) {
   this.cacheable && this.cacheable();
-  var query = typeof this.query === 'object' ? this.query : utils.parseQuery(this.query);
-  var _options = typeof this.options === 'object' ? this.options['ejs-compiled-loader'] || {} : {};
-  _options = typeof utils.getOptions === 'function' ? merge(utils.getOptions(this), _options) : _options;
-  var opts = merge(_options, query);
+  var opts = typeof this.options === 'object' ? this.options['ejs-compiled-loader'] || {} : {};
+  opts = typeof utils.getOptions === 'function' ? merge(utils.getOptions(this), opts) : opts;
 
   if (opts.client == undefined) {
     opts.client = true;
