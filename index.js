@@ -29,7 +29,6 @@ module.exports = function(source) {
   }
 
   var template = ejs.compile(source, opts);
-  template.dependencies.forEach(this.dependency.bind(this));
 
   // Beautify javascript code
   if (this.loaders.length > 1) {
